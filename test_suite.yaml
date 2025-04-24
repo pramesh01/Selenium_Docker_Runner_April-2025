@@ -1,0 +1,19 @@
+services:
+  vendor-portal:
+    image: pramesh11/myprojectimage_april25
+    environment:
+    - BROWSER=chrome
+    - HUB_HOST=hub
+    - THREAD_COUNT=3
+    - TEST_SUITE=vendorportal.xml
+    volumes:
+    - C:\Users\prame\Docker_VolumeMapping\05-Running-Tests-Inside-Docker\02-Grid_and_TestSuite/output/vendorportal:/home/MyProject/test-output
+  flight-registration:
+    image: pramesh11/myprojectimage_april25
+    environment:
+    - BROWSER=firefox
+    - HUB_HOST=hub
+    - THREAD_COUNT=4
+    - TEST_SUITE=flightregistration.xml
+    volumes:
+    - C:\Users\prame\Docker_VolumeMapping\05-Running-Tests-Inside-Docker\02-Grid_and_TestSuite/output/flightregistration:/home/MyProject/test-output  
