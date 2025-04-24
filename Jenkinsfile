@@ -10,7 +10,7 @@ pipeline{
 
         stage('Running Tests'){
             steps{
-                bat "docker-compose -f test_suites.yaml up"
+                bat "docker-compose -f test_suite.yaml up"
             }
 
         }
